@@ -32,9 +32,9 @@ Create a `.env` file in the root of the project with the following content:
 ```env
 DATABASE_HOST=localhost
 DATABASE_PORT=5432
-DATABASE_USERNAME=yourusername
-DATABASE_PASSWORD=yourpassword
-DATABASE_NAME=yourdatabase
+DATABASE_USER=postgres
+DATABASE_PASSWORD=postgres
+DATABASE_NAME=blog
 REDIS_HOST=localhost
 REDIS_PORT=6379
 ```
