@@ -45,13 +45,7 @@ REDIS_PORT=6379
 npm run start:db
 ```
 
-5. **Run database migrations:**
-
-```sh
-npm run typeorm migration:run
-```
-
-6. **Start the application:**
+5. **Start the application:**
 
 ```sh
 npm run start:dev
@@ -59,17 +53,7 @@ npm run start:dev
 
 The application will be running on `http://localhost:3000`. Swagger documentation is available at `http://localhost:3000/api`.
 
-## Objectives
-
-1. **Set up API endpoints for creating and retrieving blog posts**
-2. **Implement Redis caching to enhance read performance**
-3. **Ensure data integrity and security**
-4. **Provide input validation**
-5. **Generate API documentation using Swagger**
-6. **Implement unit and integration tests**
-7. **Follow best practices for code quality and efficient use of technologies**
-
-### Achievements
+### Objectives
 
 #### 1. Set up API endpoints for creating and retrieving blog posts
 
