@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: blog
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=postgres
+      - DATABASE_NAME=blog
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    profiles:
+      - app
+
+volumes:
+  pgdata:
